@@ -25,3 +25,14 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/sales", salesRoutes);
 app.use("/management", managementRoutes);
+
+const PORT = process.env.PORT || 9000;
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(PORT, console.log("Listening on port " + process.env.PORT));
+  })
+  .catch((err) => console.log(err));
