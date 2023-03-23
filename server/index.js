@@ -6,6 +6,11 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
 
+import clientRoutes from "./routes/client.js";
+import generalRoutes from "./routes/general.js";
+import salesRoutes from "./routes/sales.js";
+import managementRoutes from "./routes/management.js";
+
 dotenv.config();
 const app = express();
 app.use(express.json());
