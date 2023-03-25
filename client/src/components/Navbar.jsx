@@ -12,7 +12,7 @@ import FlexBetween from "./FlexBetween";
 import { useDispatch } from "react-redux";
 import { setMode } from "state";
 import { useState } from "react";
-import { AppBar, IconButton, Toolbar } from "@mui/material";
+import { AppBar, IconButton, InputBase, Toolbar } from "@mui/material";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,17 @@ const Navbar = () => {
           <IconButton onClick={() => console.log("open/close sidebar")}>
             <MenuIcon />
           </IconButton>
-          <FlexBetween></FlexBetween>
+          <FlexBetween
+            backgroundColor={theme.palette.background.alt}
+            borderRadius="9px"
+            gap="3rem"
+            p="0.1rem 1.5rem"
+          >
+            <InputBase placeholder="Search"></InputBase>
+            <IconButton>
+              <Search></Search>
+            </IconButton>
+          </FlexBetween>
         </FlexBetween>
       </Toolbar>
     </AppBar>
