@@ -6,13 +6,18 @@ import {
   Search,
   SettingsOutlined,
   ArrowDropDownOutlined,
-  useTheme,
 } from "@mui/icons-material";
 import FlexBetween from "./FlexBetween";
 import { useDispatch } from "react-redux";
 import { setMode } from "state";
 import { useState } from "react";
-import { AppBar, IconButton, InputBase, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  IconButton,
+  InputBase,
+  Toolbar,
+  useTheme,
+} from "@mui/material";
 
 const Navbar = () => {
   const dispatch = useDispatch();
