@@ -32,6 +32,8 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
 
+const navItems = [{ text: "Dashboard", icon: <HomeOutlined /> }];
+
 const Sidebar = (drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile) => {
   const { pathName } = useLocation();
   const [active, setActive] = useState("");
