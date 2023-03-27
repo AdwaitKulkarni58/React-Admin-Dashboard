@@ -109,7 +109,29 @@ const Sidebar = (drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile) => {
                         navigate(`/${lctext}`);
                         setActive(lctext);
                       }}
-                    ></ListItemButton>
+                      sx={{
+                        backgroundColor:
+                          active === lctext
+                            ? theme.palette.secondary[300]
+                            : "transparent",
+                        color:
+                          active === lctext
+                            ? theme.palette.primary[600]
+                            : theme.palette.secondary[100],
+                      }}
+                    >
+                      <ListItemIcon
+                        sx={{
+                          ml: "2rem",
+                          color:
+                            active === lctext
+                              ? theme.palette.primary[600]
+                              : theme.palette.secondary[200],
+                        }}
+                      >
+                        {icon}
+                      </ListItemIcon>
+                    </ListItemButton>
                   </ListItem>
                 );
               })}
