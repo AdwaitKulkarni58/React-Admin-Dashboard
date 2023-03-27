@@ -131,6 +131,10 @@ const Sidebar = (drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile) => {
                       >
                         {icon}
                       </ListItemIcon>
+                      <ListItemText primary={text} />
+                      {active === lctext && (
+                        <ChevronRightOutlined sx={{ ml: "auto" }} />
+                      )}
                     </ListItemButton>
                   </ListItem>
                 );
