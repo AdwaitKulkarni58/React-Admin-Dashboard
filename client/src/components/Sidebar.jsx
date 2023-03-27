@@ -92,7 +92,28 @@ const Sidebar = (drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile) => {
                 )}
               </FlexBetween>
             </Box>
-            <List></List>
+            <List>
+              {navItems.map(({ text, icon }) => {
+                if (!icon) {
+                  return (
+                    <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem" }}>
+                      {text}
+                    </Typography>
+                  );
+                }
+                const lctext = text.toLowerCase();
+                return (
+                  <ListItem key={text} disablePadding>
+                    <ListItemButton
+                      onClick={() => {
+                        navigate(`/${lctext}`);
+                        setActive(lctext);
+                      }}
+                    ></ListItemButton>
+                  </ListItem>
+                );
+              })}
+            </List>
           </Box>
         </Drawer>
       )}
