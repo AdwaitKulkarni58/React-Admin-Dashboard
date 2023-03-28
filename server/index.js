@@ -11,6 +11,9 @@ import generalRoutes from "./routes/general.js";
 import salesRoutes from "./routes/sales.js";
 import managementRoutes from "./routes/management.js";
 
+import User from "./models/User.js";
+import { dataUser } from "./data/index.js";
+
 dotenv.config();
 const app = express();
 app.use(express.json());
