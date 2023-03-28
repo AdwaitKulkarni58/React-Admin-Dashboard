@@ -37,5 +37,6 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, console.log("Listening on port " + process.env.PORT));
+    User.insertMany(dataUser);
   })
   .catch((err) => console.log(err));
